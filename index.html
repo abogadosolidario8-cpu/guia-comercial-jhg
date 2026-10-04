@@ -209,9 +209,10 @@
 
         function initMap() {
             map = L.map('map').setView([9.0, -71.5], 13);
-            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-                attribution: 'Tiles © Esri', maxZoom: 18
-            }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);  
         }
 
         function updateMapMarker(lat, lng) {
