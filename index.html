@@ -69,7 +69,7 @@
 
     <div class="container">
         <div class="section">
-            <h2> Guía Comercial</h2>
+            <h2>📊 Guía Comercial</h2>
             <div class="stats" id="stats">Cargando establecimientos...</div>
         </div>
 
@@ -82,7 +82,7 @@
                 <div class="coordinates-display" id="gpsCoordinates">Latitud: — | Longitud: —</div>
             </div>
             <div class="gps-section">
-                <h3>🌐 Coordenadas UTM</h3>
+                <h3> Coordenadas UTM</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 15px 0;">
                     <div class="form-group"><label>Este (X)</label><input type="number" id="utmX" placeholder="Ej: 345678"></div>
                     <div class="form-group"><label>Norte (Y)</label><input type="number" id="utmY" placeholder="Ej: 1234567"></div>
@@ -209,7 +209,7 @@
 
         function initMap() {
             map = L.map('map').setView([9.0, -71.5], 13);
-            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
                 attribution: 'Tiles © Esri', maxZoom: 18
             }).addTo(map);
         }
