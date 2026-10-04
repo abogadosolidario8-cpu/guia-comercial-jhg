@@ -78,11 +78,11 @@
             <div class="gps-section">
                 <h3>📍 Usar GPS de este dispositivo</h3>
                 <p>Párate frente al establecimiento y presiona el botón.</p>
-                <button class="secondary" onclick="getCurrentLocation()" style="margin-top: 15px;">📍 Capturar GPS actual</button>
+                <button class="secondary" onclick="getCurrentLocation()" style="margin-top: 15px;"> Capturar GPS actual</button>
                 <div class="coordinates-display" id="gpsCoordinates">Latitud: — | Longitud: —</div>
             </div>
             <div class="gps-section">
-                <h3> Coordenadas UTM</h3>
+                <h3>🌐 Coordenadas UTM</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 15px 0;">
                     <div class="form-group"><label>Este (X)</label><input type="number" id="utmX" placeholder="Ej: 345678"></div>
                     <div class="form-group"><label>Norte (Y)</label><input type="number" id="utmY" placeholder="Ej: 1234567"></div>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="section">
-            <h2>2️⃣ Datos del establecimiento</h2>
+            <h2>2️ Datos del establecimiento</h2>
             <form id="establishmentForm">
                 <div class="form-group">
                     <label for="name">Nombre del comercio *</label>
@@ -209,10 +209,11 @@
 
         function initMap() {
             map = L.map('map').setView([9.0, -71.5], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors',
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '© OpenStreetMap © CARTO',
+                subdomains: 'abcd',
                 maxZoom: 19
-            }).addTo(map);  
+            }).addTo(map);
         }
 
         function updateMapMarker(lat, lng) {
